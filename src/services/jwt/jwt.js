@@ -29,11 +29,6 @@ exports.validateTokenSuperAdmin = (req, res, next) => {
           return res.json({
             message: "Authentication failed. Invalid SuperAdmin Access.",
           });
-
-        if (data[0][0].admin_type !== "SUPER_ADMIN")
-          return res.json({
-            message: "Authentication failed. Invalid SuperAdmin Access.",
-          });
       })
       .catch((err) => {
         return res.json({ message: "Authentication failed. Invalid Access." });
